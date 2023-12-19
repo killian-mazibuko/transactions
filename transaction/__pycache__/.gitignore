@@ -1,0 +1,3 @@
+t_admin/
+__pycache__/
+*.sqlite3

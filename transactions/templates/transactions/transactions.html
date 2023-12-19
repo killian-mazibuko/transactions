@@ -1,0 +1,12 @@
+{% extends "transactions/base.html" %} {% block content %}
+<p>Transactions</p>
+<ul>
+  {% for transaction in transactions %}
+  <li>{{ transaction.amount }} Type {{transaction.transaction_type}}</li>
+  {% empty %}
+  <li>No transactions have been added yet.</li>
+  {% endfor %}
+</ul>
+<p>Balance: {{ balance }}</p>
+<a href="{% url 'transactions:new_transaction' %}">Add a new transaction:</a>
+{% endblock content %}

@@ -1,0 +1,9 @@
+{% extends "transactions/base.html" %} {% block content %}
+<p>Add a new transaction:</p>
+
+<form action="{% url 'transactions:new_transaction' %}" method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button name="submit">add transaction</button>
+</form>
+
+{% endblock content %}
